@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="product-colors.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+    <style>
+      .slides {
+        width: 82% !important;
+      }
+
+      .med-text {
+        font-size: 60px;
+      }
+
+      .large-text {
+        font-size: 100px;
+      }
+
+      .normalcase {
+        text-transform: none !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        text-transform: none !important;
+      }
+
+      .flexrox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .flexrox-no-marg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .browser-img {
+        width: 100px;
+        height: 100px;
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .framework-img {
+        width: 200px;
+        height: 200px;
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .no-img-outline {
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .big-emoji {
+        font-size: 100px;
+      }
+
+      .halfgone {
+        opacity: 0.5;
+      }
+
+      .tab-and-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+      }
+
+      .hidden-filler {
+        opacity: 0;
+        user-select: none;
+      }
+
+      .icon {
+        width: 50px;
+      }
+
+      .comic {
+        font-family: "Comic Sans MS", cursive, sans-serif !important;
+      }
+
+      .big-blockquote {
+        font-size: 65px;
+        width: 80% !important;
+      }
+
+      .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadein 1.5s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .rotation-animation {
+        animation: rotAnimation 2s linear infinite;
+      }
+
+      @keyframes rotAnimation {
+        0% {
+          transform:rotate(0deg);
+        }
+        100% {
+          transform:rotate(360deg);
+        }
+      }
+
+      .color-animation {
+        animation: colorLoop 0.7s infinite;
+        animation-direction: alternate;
+        color: white;
+      }
+
+      @keyframes colorLoop {
+        0% {
+          color: #dd0031;
+        }
+        50% {
+          color: #4fc08d;
+        }
+        100% {
+          color: #5ed4f4;
+        }
+      }
+
+      .smallerH1 h1 {
+        font-size: 2em !important;
+      }
+
+      .black-stroke {
+        -webkit-text-stroke: 2px black;
+      }
+
+      .black-stroke-thin {
+        -webkit-text-stroke: 1px black;
+      }
+
+      .opacity-hidden {
+        opacity: 0;
+      }
+
+      .backdrop-default {
+        backdrop-filter: blur(4px) opacity(20%);
+      }
+
+      .backdrop-block {
+        filter: blur(3px);
+      }
+
+      .no-filter {
+        filter: unset;
+      }
+
+      .large-list {
+        font-size: 40px;
+      }
+
+      .intro-title {
+        font-size: 1.65em;
+        /* font-size: 1.75em; */
+      }
+
+      .big-text {
+        font-size: 1.7em;
+        /* font-size: 1.80em; */
+      }
+      .med-text {
+        font-size: 80px;
+      }
+
+      .material-icon {
+        width: 100px;
+      }
+
+      .no-bold {
+        font-weight: normal;
+      }
+
+      .super-small {
+        font-size: 0.2em;
+      }
+
+      .computas-logo {
+        height: 2.4em;;
+      }
+      .pondus {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2 class="intro-title">
+            Why <span class="big-text angular">Angular</span> is the best
+            <span class="big-text typescript">framework</span> for a
+            <span class="big-text js">design-system</span>
+          </h2>
+        </section>
+        <section>
+          <h1>Jan Greger Hemb</h1>
+          <h2 class="fragment computas">
+            <img src="media/logos/computas.png" class="computas-logo no-img-outline" />
+          </h2>
+          <!-- <h2 class="fragment">
+              <img
+                src="media/pondus.jpg"
+                class="pondus no-img-outline"
+              />
+            </h2> -->
+        </section>
+
+        <!-- <section>
+          <h1>Thy Demo</h1>
+        </section> -->
+        <section>
+          <section class="black-stroke" data-background="media/stock/adventureStart.jpeg">
+            <h1>Story time 📚</h1>
+            <h1 class="opacity-hidden">1</h1>
+            <h1 class="opacity-hidden">1</h1>
+          </section>
+          <section class="black-stroke" data-background="media/stock/power.jpg">
+            <h2>Medium sized company</h2>
+            <h1 class="fragment elvia">Elvia</h1>
+            <h3 class="fragment">Recent push to digital solutions</h3>
+          </section>
+          <section class="black-stroke" data-background="media/stock/rapidDev.jpg">
+            <h3>Needed rapid development of new systems</h3>
+            <h1 class="opacity-hidden">1</h1>
+            <h1 class="opacity-hidden">1</h1>
+          </section>
+          <section class="black-stroke" data-background="media/stock/language.jpg">
+            <h2 class="">No shared design language</h2>
+          </section>
+          <section class="black-stroke" data-background="media/stock/abandoned.jpg">
+            <h1>Copy and paste</h1>
+            <h1 class="fragment">With bugs</h1>
+          </section>
+          <section class="black-stroke" data-background="media/stock/slow.jpg">
+            <h2>Making a new site took too long</h2>
+            <h1 class="fragment">Re-invented the wheel</h1>
+          </section>
+          <section class="black-stroke" data-background="media/stock/mountanSky.jpeg">
+            <h2 class="">A consistent design</h2>
+            <h2 class="fragment">A consistent user experience</h2>
+            <h2 class="fragment">At a high development speed</h2>
+            <h2 class="opacity-hidden">1</h2>
+            <!-- find better word-->
+            <!-- <h2 class="fragment">Need a standard</h2> -->
+          </section>
+          <section>
+            <h2>Need to support/handle:</h2>
+            <div class="fragment addFadeinBelow large-list">
+              <span style="animation-delay: 100ms;">• The blind</span>
+              <span style="animation-delay: 150ms;">• All major browsers on desktop</span>
+              <span style="animation-delay: 200ms;">• All major browsers on mobile</span>
+              <span style="animation-delay: 250ms;">• The deaf</span>
+              <span style="animation-delay: 300ms;">• Visually impaired</span>
+              <span style="animation-delay: 350ms;">• Huge 4k devices</span>
+              <span style="animation-delay: 400ms;">• Tiny 320px mobiles</span>
+              <span style="animation-delay: 450ms;">• Everything in between</span>
+              <span style="animation-delay: 500ms;">• Zoomin on the website without breaking</span>
+              <span style="animation-delay: 550ms;">• Gdpr</span>
+              <span style="animation-delay: 600ms;">• Need to look amazing and cutting edge</span>
+              <span style="animation-delay: 650ms;">• Needs to load fast on horrible connections and devices</span>
+              <span style="animation-delay: 700ms;">• Pwa, work offline</span>
+              <span style="animation-delay: 750ms;">• And also be innovative and useful!</span>
+              <span style="animation-delay: 800ms;">• Responsive web design</span>
+              <span style="animation-delay: 850ms;">• css pre-processor</span>
+              <span style="animation-delay: 900ms;">• build system like webpack</span>
+              <span style="animation-delay: 950ms;">• And 95% or more test coverage</span>
+              <span style="animation-delay: 1000ms;">• Pixel perfect across all browsers</span>
+              <span style="animation-delay: 1050ms;"
+                >• Needs to be a single page application, but each route should be lazy loaded</span
+              >
+              <span style="animation-delay: 1100ms;"
+                >• Development needs to adept quickly to changes in requirements</span
+              >
+              <span style="animation-delay: 1150ms;">• The website should be easily to change to new framework</span>
+              <span style="animation-delay: 1200ms;">• Synthetic test data</span>
+            </div>
+          </section>
+          <section class="black-stroke" data-background="media/stock/looking.jpg">
+            <h1>Needed a solution</h1>
+          </section>
+        </section>
+        <section>
+          <h1>A Design System</h1>
+          <h2 class="fragment">The single source of truth</h2>
+          <!-- on how applications should look and behave -->
+          <h3>
+            <span class="comic fragment">Font</span><span class="fragment">, <span class="angular">color</span></span
+            ><span class="fragment">, <span class="med-text">sizing</span></span>
+          </h3>
+          <h3 class="fragment">Guide to UX and design</h3>
+          <h3 class="fragment">Re-usable elements</h3>
+          <!-- <h3 class="fragment">Toolkit (and framework) for rapitly creating new websites</h3> -->
+        </section>
+        <section class="" data-background="media/stock/looking.jpg">
+          <blockquote class="big-blockquote backdrop-default">
+            Design systems are the solution to the problem of how to enable rapid development and innovation, while
+            maintaining a consistent user experience, and design.
+          </blockquote>
+        </section>
+        <section>
+          <section>
+            <h1 class="flex-center">
+              Material Design
+              <img
+                src="media/logos/material.svg"
+                class="material-icon no-img-outline"
+                style="margin-left: 10px !important;"
+              />
+            </h1>
+          </section>
+          <section data-background="media/materialdesign/frontpage.png" style="top: 0px !important;"></section>
+          <section data-background="media/materialdesign/button demo.png" style="top: 0px !important;"></section>
+          <section data-background="media/materialdesign/placement.png" style="top: 0px !important;"></section>
+        </section>
+        <!-- <section>
+          <h2>A lack of an design system</h2>
+          <h3 class="fragment">Each website developed looks differently</h3>
+          <h3 class="fragment">Witch side is the button on?</h3>
+          <h3 class="fragment">Different colors and sizes</h3>
+          <h3 class="fragment">Each new project starts with an handicap</h3>
+        </section> -->
+
+        <section>
+          <section class="black-stroke" data-background="media/stock/storycont.jpg">
+            <!-- The? -->
+            <h1>Story continues 📖</h1>
+          </section>
+
+          <!-- TODO new image less pronouced -->
+          <section class="black-stroke" data-background="media/stock/rail.jpg">
+            <h2>Had several websites already</h2>
+            <h2 class="fragment">In different frameworks</h2>
+            <h2 class="fragment">Needed to work everywhere</h2>
+          </section>
+          <section>
+            <h1>How to create it?</h1>
+            <h2 class="fragment"><span class="css">CSS</span> only is a start</h2>
+            <h3 class="fragment">Need logic for popups, tables, gallery</h3>
+          </section>
+          <section>
+            <h2>Needed to be easy to use</h2>
+            <h3 class="fragment">In all projects</h3>
+            <!-- <h3 class="fragment">And frameworks</h3> -->
+            <div class="flexrox">
+              <img src="media/logos/vue1.png" class="framework-img fragment" />
+              <img src="media/logos/angular1.png" class="framework-img fragment" />
+              <img src="media/logos/react.png" class="framework-img fragment" />
+            </div>
+          </section>
+          <section>
+            <h2>Needed good documentation 📚</h2>
+            <h1 class="fragment">And marketing 🎉</h1>
+          </section>
+          <section>
+            <h1>
+              ⚙️
+            </h1>
+          </section>
+          <section>
+            <h2>Landed on a two part system</h2>
+          </section>
+          <!-- TODO illustration -->
+        </section>
+        <section>
+          <section>
+            <h2>
+              Pure <span class="css">CSS</span>/<span class="scss">SCSS</span> core (+ <span class="html">HTML</span>)
+            </h2>
+            <h2 class="fragment">Component library (<span class="js">JS</span>/<span class="typescript">TS</span>)</h2>
+          </section>
+          <section>
+            <h2>Pure <span class="css">CSS</span> core (+ <span class="html">HTML</span>)</h2>
+            <h2 class="fragment"><span class="css">CSS</span> classes</h2>
+            <h2 class="fragment">Like buttons, cards and badges</h2>
+            <h2 class="fragment">
+              Sometimes need logic (<span class="js">JS</span>/<span class="typescript">TS</span>)
+            </h2>
+          </section>
+
+          <section>
+            <h1>Component library</h1>
+            <!-- <h2 class="fragment">Can't just use <span class="css">CSS</span></h2> -->
+            <h2 class="fragment">Ready to use components</h2>
+            <h2 class="fragment">Like tables, popups and select</h2>
+            <h2 class="fragment">Styled from <span class="css">CSS</span> core</h2>
+            <!-- <h3 class="fragment">From a simple divider to a complex table</h3> -->
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>
+              <span class="css">CSS</span> is cheap<span class="fragment"
+                >, <span class="js">JS</span> is expensive</span
+              >
+            </h2>
+            <h3 class="fragment">Make as much as possible in <span class="css">CSS</span></h3>
+            <h3 class="fragment">The limitations of <span class="css">CSS</span> is good</h3>
+          </section>
+          <section>
+            <h1>Needed a framework</h1>
+            <h2 class="fragment">Pure <span class="web-components">web components</span> are too basic</h2>
+            <h1 class="fragment angular">Angular</h1>
+          </section>
+          <section>
+            <h2 class="angular">Angular</h2>
+            <!--  TODO also has biggest feature set -->
+            <table>
+              <tbody>
+                <tr>
+                  <td class="fragment">The most powerful <span class="cli">CLI</span></td>
+                  <td class="fragment">Library support</td>
+                </tr>
+                <tr>
+                  <td class="fragment">Compiles to <span class="web-components">web components</span></td>
+                  <td class="fragment">
+                    Can use in <span class="vue">Vue</span> and <span class="react">React</span>!
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fragment">Opinionated Architecture</td>
+                  <td class="fragment">Projects are similar</td>
+                </tr>
+                <tr>
+                  <td class="fragment">Reduce bundle size</td>
+                  <td class="fragment"><span class="angular">Angular</span> 9 IVY</td>
+                </tr>
+                <tr>
+                  <td class="fragment"><span class="angular">Angular</span> CDK</td>
+                  <td class="fragment">Drag n drop, virtual scroll</td>
+                </tr>
+                <tr>
+                  <td class="fragment">DI system</td>
+                  <td class="fragment">Reusable services</td>
+                </tr>
+                <tr>
+                  <td class="fragment">Complete framework</td>
+                  <td class="fragment">Everything needed</td>
+                </tr>
+                <tr>
+                  <td class="fragment">Schematics</td>
+                  <td class="fragment">Auto install and update</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <pre class=""><code class="BASH" data-trim contenteditable>
+              ng add @company/component-library
+            </code></pre>
+            <h2 class="fragment">Auto install, and setup 🚀</h2>
+            <pre class="fragment"><code class="BASH" data-trim contenteditable>
+              ng update @company/component-library
+            </code></pre>
+            <h2 class="fragment">Auto update</h2>
+            <pre class="fragment"><code class="BASH" data-trim contenteditable>
+              ng generate library my-component-library
+            </code></pre>
+            <h2 class="fragment">Auto setup of new library</h2>
+          </section>
+          <section>
+            <h2>Build on top of <span class="angular">Angular material</span></h2>
+            <h2 class="fragment">Table, select, modal</h2>
+            <h2 class="fragment">Don't reinvent the wheel</h2>
+          </section>
+        </section>
+        <section>
+          <!-- todo fix where did we put it -->
+          <h2>What goes in the component library?</h2>
+          <h3 class="fragment">First try to put in <span class="css">CSS</span> core</h3>
+          <h3 class="fragment flexrox-no-marg">Require Logic ➡️ <span class="fragment">Component library</span></h3>
+          <h3 class="fragment">
+            Bare minimum <span class="css">CSS</span> in <span class="angular">Angular</span> project
+          </h3>
+        </section>
+        <section>
+          <!--  fix all is comp lib -->
+          <h1>Testing</h1>
+          <h3 class="fragment"><span class="css">CSS</span> testing is hard</h3>
+          <h3 class="fragment"><span class="backstop">BackstopJS</span>, visual regression testing</h3>
+          <h3 class="fragment">Test everything in component library</h3>
+          <h3 class="fragment">Unit and E2E (Cypress)</h3>
+        </section>
+
+        <section>
+          <!-- <h2>CI/CD</h2> -->
+          <h1>Publish everything</h1>
+          <h3 class="fragment">
+            Semantic versioning (<span class="major-c">Major</span>.<span class="minor-c">Minor</span>.<span
+              class="patch-c"
+              >Patch</span
+            >)
+          </h3>
+          <!-- <h3 class="fragment">(Major.Minor.Patch)</h3> -->
+          <h3 class="fragment github-actions">Github actions</h3>
+          <h3 class="fragment">Merge to master ➡️ <span class="fragment">Publish</span></h3>
+          <h3 class="fragment">Shortest turnaround</h3>
+        </section>
+
+        <section>
+          <h1>Documentation</h1>
+          <!-- TODO screenshot! -->
+          <h3 class="fragment">Each part self documenting</h3>
+          <h3 class="fragment">Best practice in <span class="css">CSS</span> core</h3>
+        </section>
+
+        <section class="black-stroke" data-background="media/hdd.png"></section>
+        <section class="black-stroke" data-background="media/hdd-doc.png"></section>
+        <section class="black-stroke" data-background="media/hal.png"></section>
+        <section class="black-stroke" data-background="media/hal-doc.png"></section>
+
+        <section>
+          <section>
+            <h1><span class="angular">Angular</span> tips n tricks</h1>
+          </section>
+          <section>
+            <h2><span class="angular">ChangeDetectionStrategy</span>.OnPush</h2>
+            <h3 class="fragment">Takes control over change detection</h3>
+            <h3 class="fragment">Reduce re-renders</h3>
+          </section>
+          <section>
+            <h2>Input as <span class="html">HTML</span></h2>
+            <pre class="fragment"><code class="HTML" data-trim contenteditable>
+              <my-component content="Hello"></my-component> 
+            </code></pre>
+            <pre class="fragment"><code class="HTML" data-trim contenteditable>
+              <my-component>
+                <p>Hello</p>
+              </my-component>
+            </code></pre>
+          </section>
+          <section>
+            <!-- TODO fix code example -->
+            <h1 class="">ngProjectAs + select</h1>
+            <pre class="fragment"><code class="HTML" data-trim contenteditable>
+              <my-component>
+                <ng-container ngProjectAs="pageTitle">Page Title</ng-container>
+                <ng-container ngProjectAs="pageContent">Page Content</ng-container>
+              </my-component>
+            </code></pre>
+            <pre class="fragment"><code class="HTML" data-trim contenteditable>
+              
+            // inside  my-component
+            <ng-content select="pageTitle"></ng-content>
+            <p>
+              <ng-content select="pageContent"></ng-content>
+            </p>
+            </code></pre>
+          </section>
+          <section>
+            <h1 class="angular">viewEncapsulation</h1>
+            <h2 class="fragment">Consider ShadowDom</h2>
+            <pre class="fragment"><code class="CSS" data-trim contenteditable>
+              /* Allow for margin and padding */
+              :host {
+                display: block;
+              }       
+            </code></pre>
+
+            <!-- <pre class="fragment"><code class="HTML" data-trim contenteditable>
+              :host(.big) .card {
+                width: 700px;
+              }
+              .card {
+                width: 200px;
+              }
+              <app-card class="big" style="margin: 10px"></app-card>
+            </code></pre>
+            <h2 class="fragment">ShadowDom</h2> -->
+          </section>
+        </section>
+        <section>
+          <section class="black-stroke" data-background="media/stock/tips.jpg">
+            <h1>Tips n tricks</h1>
+          </section>
+          <section>
+            <h1>Don't support IE</h1>
+            <div class="flexrox">
+              <img src="media/browsers/chrome.svg" class="browser-img fragment" />
+              <img src="media/browsers/ff.svg" class="browser-img fragment" />
+              <img src="media/browsers/opera icon.svg" class="browser-img fragment" />
+              <img src="media/browsers/edge.svg" class="browser-img fragment" />
+              <img src="media/browsers/safari.svg" class="browser-img fragment" />
+            </div>
+            <h2 class="fragment"><span class="css">CSS</span> variables, Grid, Flex</h2>
+          </section>
+          <section>
+            <!--  TODO example -->
+            <h2 class="">Use <span class="css">CSS</span> variables</h2>
+            <pre class="fragment"><code class="CSS" data-trim contenteditable>
+              :root {
+                --color-primary: red;
+                --color-secondary: blue;
+              }
+
+              p {
+                color: var(--color-primary);
+              }
+            </code></pre>
+            <h3 class="fragment">No need to import <span class="scss">SCSS</span> file</h3>
+            <h3 class="fragment">Dynamic switch to <span class="dark-theme">dark</span> theme</h3>
+            <h3 class="fragment">Change <span class="color-animation">colors</span> on the fly</h3>
+            <!-- <h3 class="fragment">Can use in calc()</h3> -->
+          </section>
+          <section>
+            <h2>Conventional <span class="git">changelog</span></h2>
+            <h3 class="fragment">feat(popup): <span class="no-bold">Added close button</span></h3>
+            <h3 class="fragment">bug(button): <span class="no-bold">Fixed hover effect</span></h3>
+            <h3 class="fragment">refactor(table): <span class="no-bold">Improved speed</span></h3>
+          </section>
+          <section class="smallerH1">
+            <!-- <h2>Other tips n tricks</h2> -->
+            <h1 class="">Use <span class="scss">SCSS</span></h1>
+            <h1 class="fragment">Embrace <span class="typescript">Typescript</span></h1>
+            <!-- <h1>
+              <span class="fragment">
+                With
+                <span class="typescript">StrictNullChecks</span>
+              </span>
+            </h1> -->
+            <h1 class="fragment">Adopt <span class="kanban">Kanban</span></h1>
+            <h1 class="fragment">Apply <span class="prettier">Prettier</span></h1>
+            <h1 class="fragment">Go <span class="open-source">Open source</span></h1>
+          </section>
+          <!-- <section>
+            <h2>Open source</h2>
+          </section> -->
+        </section>
+        <section>
+          <section class="smallerH1 black-stroke" data-background="media/stock/thinking2.jpg">
+            <h1>What to keep in mind 💭</h1>
+          </section>
+          <section>
+            <h2>Design system on native mobile</h2>
+            <h2 class="fragment">
+              Can't use <span class="css">CSS</span>, <span class="js">JS</span> or <span class="html">HTML</span>
+            </h2>
+            <h2 class="fragment flex-center">
+              Consider design tokens
+              <img src="media/chip.png" class="icon no-img-outline" style="margin-left: 10px !important;" />
+            </h2>
+            <h2 class="fragment">A more abstract design system</h2>
+          </section>
+          <section>
+            <h1>Don't use <span class="angular">Angular</span></h1>
+            <h1 class="fragment">if everyone knows <span class="vue">Vue</span></h1>
+            <h5 class="fragment super-small">But not <span class="react">React</span></h5>
+          </section>
+          <section>
+            <h2>Consider making directly as</h2>
+            <h1 class="fragment"><span class="web-components">web&nbsp;components</span></h1>
+            <h2 class="fragment">material-components-web-components</h2>
+          </section>
+          <section data-background="media/mat web comp.png"></section>
+          <section>
+            <h2>Creating a design system is not easy</h2>
+            <h1 class="fragment">But worth it</h1>
+          </section>
+        </section>
+        <section>
+          <section class="black-stroke" data-background="media/stock/storycont.jpg">
+            <!-- The? -->
+            <h1>End of story 📘</h1>
+          </section>
+          <section class="black-stroke" data-background="media/stock/happy3.jpg">
+            <!-- The? -->
+            <h1>Rapid development</h1>
+            <h1 class="fragment">Maintaining consistency</h1>
+          </section>
+        </section>
+        <!-- <section ></section> -->
+        <section class="black-stroke" data-background="media/stock/adventureOver.jpeg">
+          <h1 class="fragment">Thanks for listening!</h1>
+          <h2 class="fragment">Jan Greger Hemb</h2>
+          <h1 class="fragment"><span class="bcc">Curious</span> Programming</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        history: true,
+        hash: true,
+        controls: false,
+        progress: false,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+
+      Reveal.addEventListener("fragmentshown", function (event) {
+        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+          Array.from(event.fragment.children).forEach((current) => {
+            current.classList.add("fade-in");
+          });
+        }
+      });
+      Reveal.addEventListener("fragmenthidden", function (event) {
+        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+          Array.from(event.fragment.children).forEach((current) => {
+            current.classList.remove("fade-in");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

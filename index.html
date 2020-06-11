@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="product-colors.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+    <style>
+      /* only for prez, not for speaker view */
+      @media screen and (min-width: 1500px) {
+        .slides {
+          width: 82% !important;
+        }
+      }
+
+      .med-text {
+        font-size: 60px;
+      }
+
+      .large-text {
+        font-size: 100px;
+      }
+
+      .normalcase {
+        text-transform: none !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        text-transform: none !important;
+      }
+
+      .flexrox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .flexrox-no-marg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .browser-img {
+        width: 100px;
+        height: 100px;
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .framework-img {
+        width: 200px;
+        height: 200px;
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .no-img-outline {
+        margin: 0px !important;
+        margin-right: 10px !important;
+        background: unset !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .big-emoji {
+        font-size: 100px;
+      }
+
+      .halfgone {
+        opacity: 0.5;
+      }
+
+      .tab-and-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+      }
+
+      .hidden-filler {
+        opacity: 0;
+        user-select: none;
+      }
+
+      .icon {
+        width: 50px;
+      }
+
+      .comic {
+        font-family: "Comic Sans MS", cursive, sans-serif !important;
+      }
+
+      .big-blockquote {
+        font-size: 65px;
+        width: 80% !important;
+      }
+
+      .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadein 1.5s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .rotation-animation {
+        animation: rotAnimation 2s linear infinite;
+      }
+
+      @keyframes rotAnimation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .color-animation {
+        animation: colorLoop 0.7s infinite;
+        animation-direction: alternate;
+        color: white;
+      }
+
+      @keyframes colorLoop {
+        0% {
+          color: #dd0031;
+        }
+        50% {
+          color: #4fc08d;
+        }
+        100% {
+          color: #5ed4f4;
+        }
+      }
+
+      .smallerH1 h1 {
+        font-size: 2em !important;
+      }
+
+      .black-stroke {
+        -webkit-text-stroke: 2px black;
+      }
+
+      .black-stroke-thin {
+        -webkit-text-stroke: 1px black;
+      }
+
+      .opacity-hidden {
+        opacity: 0;
+      }
+
+      .backdrop-default {
+        backdrop-filter: blur(4px) opacity(20%);
+      }
+
+      .backdrop-block {
+        filter: blur(3px);
+      }
+
+      .no-filter {
+        filter: unset;
+      }
+
+      .large-list {
+        font-size: 40px;
+      }
+
+      .intro-title {
+        font-size: 1.65em;
+        /* font-size: 1.75em; */
+      }
+
+      .big-text {
+        font-size: 1.7em;
+        /* font-size: 1.80em; */
+      }
+      .med-text {
+        font-size: 80px;
+      }
+
+      .material-icon {
+        width: 100px;
+      }
+
+      .no-bold {
+        font-weight: normal;
+      }
+
+      .super-small {
+        font-size: 0.2em;
+      }
+
+      .computas-logo {
+        height: 2.4em;
+      }
+      .pondus {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend at <span class="computas">Computas</span></h1>
+          <h3>Jan Greger Hemb</h3>
+        </section>
+
+        <!-- <section>
+          What you will learn The three frameworks What we use Why frontend and not fullstack What is Angular A fresh
+          start with Angular
+        </section> -->
+
+        <section>
+          <h1>What is frontend</h1>
+          <h2 class="fragment">The part the user see</h2>
+          <h2 class="fragment">Written in <span class="html">HTML</span> <span class="js">JS</span> <span class="css">CSS</span></h2>
+          <h2 class="fragment">The part running in the browser</h2>
+        </section>
+
+        <section>
+          <h1>Frontend fullstack</h1>
+          <h3 class="fragment">Technical frontend vs Visual frontend</h3>
+          <h4 class="fragment">Backend -> technical frontend -> Visual frontend -> Design</h4>
+        </section>
+
+        <section>
+          <h1>The big frameworks</h1>
+          <div class="flexrox">
+            <img src="media/logos/vue1.png" class="framework-img fragment" />
+            <img src="media/logos/angular1.png" class="framework-img fragment" />
+            <img src="media/logos/react.png" class="framework-img fragment" />
+          </div>
+          <h3 class="fragment">Choosing Your JavaScript Framework by John Papa</h3>
+        </section>
+
+        <section>
+          <h1 class="web-components">Web Components</h1>
+          <h3 class="fragment">18 juni 14:00, track 4</h3>
+        </section>
+
+        <section>
+          <h1>No framework is bad</h1>
+          <h2 class="fragment">Different</h2>
+          <h3 class="fragment">Some fit one type of project better</h3>
+          <h3 class="fragment">You will probably love one and hate one</h3>
+        </section>
+
+        <section>
+          <h1>What we use</h1>
+          <h2 class="fragment">Most <span class="angular">Angular</span></h2>
+          <h2 class="fragment">Some <span class="react">React</span></h2>
+          <h2 class="fragment">A bit of <span class="vue">Vue</span></h2>
+          <h2 class="fragment">And a few other</h2>
+        </section>
+
+        <section>
+          <h2>Why not use fullstack all the time?</h2>
+          <h2 class="fragment">A visit to the GP</h2>
+          <h2 class="fragment">Need specialist</h2>
+          <h2 class="fragment">The frontend has become super complex</h2>
+          <h2 class="fragment"><span class="css">CSS</span></h2>
+        </section>
+
+        <section>
+          <h2>Need to support/handle:</h2>
+          <div class="fragment addFadeinBelow large-list">
+            <span style="animation-delay: 100ms;">• The blind</span>
+            <span style="animation-delay: 150ms;">• All major browsers on desktop</span>
+            <span style="animation-delay: 200ms;">• All major browsers on mobile</span>
+            <span style="animation-delay: 250ms;">• The deaf</span>
+            <span style="animation-delay: 300ms;">• Visually impaired</span>
+            <span style="animation-delay: 350ms;">• Huge 4k devices</span>
+            <span style="animation-delay: 400ms;">• Tiny 320px mobiles</span>
+            <span style="animation-delay: 450ms;">• Everything in between</span>
+            <span style="animation-delay: 500ms;">• Zoomin on the website without breaking</span>
+            <span style="animation-delay: 550ms;">• Gdpr</span>
+            <span style="animation-delay: 600ms;">• Need to look amazing and cutting edge</span>
+            <span style="animation-delay: 650ms;">• Needs to load fast on horrible connections and devices</span>
+            <span style="animation-delay: 700ms;">• Pwa, work offline</span>
+            <span style="animation-delay: 750ms;">• And also be innovative and useful!</span>
+            <span style="animation-delay: 800ms;">• Responsive web design</span>
+            <span style="animation-delay: 850ms;">• css pre-processor</span>
+            <span style="animation-delay: 900ms;">• build system like webpack</span>
+            <span style="animation-delay: 950ms;">• And 95% or more test coverage</span>
+            <span style="animation-delay: 1000ms;">• Pixel perfect across all browsers</span>
+            <span style="animation-delay: 1050ms;"
+              >• Needs to be a single page application, but each route should be lazy loaded</span
+            >
+            <span style="animation-delay: 1100ms;"
+              >• Development needs to adept quickly to changes in requirements</span
+            >
+            <span style="animation-delay: 1150ms;">• The website should be easily to change to new framework</span>
+            <span style="animation-delay: 1200ms;">• Synthetic test data</span>
+          </div>
+        </section>
+
+        <section>
+          <h1>Everything is a dependency</h1>
+          <h2>Dependencies have Dependencies</h2>
+        </section>
+        <section>
+          <img style="max-height: 65vh;" class="no-img-outline" src="https://i.redd.it/btlnkfda0gh11.png">
+        </section>
+
+        <section>
+          <h2>Everything is a dependency</h2>
+          <!-- https://i.redd.it/btlnkfda0gh11.png -->
+          <h2 class="fragment">Try to limit what you pull inn</h2>
+          <h2 class="fragment">Bigger bundle = more loading</h2>
+          <h2 class="fragment">Crypto example</h2>
+        </section>
+
+        <section>
+          <h1>Let's learn <span class="angular">Angular</span></h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        history: true,
+        hash: true,
+        controls: false,
+        progress: false,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+
+      Reveal.addEventListener("fragmentshown", function (event) {
+        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+          Array.from(event.fragment.children).forEach((current) => {
+            current.classList.add("fade-in");
+          });
+        }
+      });
+      Reveal.addEventListener("fragmenthidden", function (event) {
+        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+          Array.from(event.fragment.children).forEach((current) => {
+            current.classList.remove("fade-in");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

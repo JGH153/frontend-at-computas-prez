@@ -1,0 +1,129 @@
+.typescript {
+	color: #007ACC !important;
+}
+
+.bcc {
+	color: #2b6abc !important;
+}
+
+.rxjsc {
+	color: #c1185a;
+}
+
+.angular {
+	color: #dd0031 !important;
+}
+
+.webrtc-orange {
+	color: #ff6600 !important;
+}
+
+.html {
+	color: #F1672C !important;
+}
+
+.css {
+	color: #008FD5 !important;
+}
+
+.js {
+	color: #8ACE17 !important;
+}
+
+.kanban {
+	color: #EC2A48 !important;
+}
+
+.elvia {
+	color: #28F400 !important;
+}
+
+.backstop {
+	color: #676156 !important;
+}
+
+.major-c {
+	color: #B70010 !important;
+}
+.minor-c {
+	color: #26881F !important;
+}
+.patch-c {
+	color: #CCCCCC !important;
+}
+
+.github-actions {
+	color: rgb(32, 136, 255) !important;
+}
+
+.scss {
+	color: #CF649A !important;
+}
+
+.dark-theme {
+	/* color: #000000 !important; */
+}
+
+.prettier {
+	color: rgb(198, 149, 200) !important;
+}
+
+.vue {
+	color: #4FC08D !important;
+}
+
+.react {
+	color: #5ED4F4 !important;
+}
+
+.web-components {
+	color: #F06707 !important;
+	
+}
+
+.cli {
+	color: #00FF00 !important;
+}
+
+.open-source {
+	color: #3BA137 !important;
+}
+
+.git {
+	color: #F05033 !important;
+}
+
+.computas {
+	color: #28D0F5 !important;
+}
+
+.ie {
+	color: #FAD548 !important;
+}
+
+.frameworks {
+	background: linear-gradient(90deg, #4FC08D 25%, #dd0031 35%, #dd0031 65%, #5ED4F4 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.attribute {
+	color: #8CDCFE !important;
+}
+
+.event {
+	color: #4EBC7C !important;
+}
+
+.function {
+	color: #DCCD79 !important;
+}
+
+.slot {
+	color: #3F9CD6 !important;
+}
+
+.polymer {
+	color: #FF4470 !important;
+}
